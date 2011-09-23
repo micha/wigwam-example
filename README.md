@@ -70,7 +70,7 @@ What's Going On
 There are four components in the application:
 
 1. The _rpc/index.php_ file, which loads and configures the framework.
-2. The *Wigwam\HTTP* class, which takes care of the HTTP layer, doing all of
+2. The **Wigwam\HTTP** class, which takes care of the HTTP layer, doing all of
    the content negotiation, session management, etc.
 3. The API classes that are inserted into the *Wigwam\HTTP* instance. Their
    public static methods are automatically exported to the JavaScript 
