@@ -8,6 +8,7 @@ Quick Start
 
 In a shell do the following commands:
   
+```javascript
     # Cd to your public html directory or docroot
     cd ~/public_html
 
@@ -20,11 +21,13 @@ In a shell do the following commands:
     # Create an appropriate htaccess file
     cp rpc/htaccess.example rpc/.htaccess
     vi rpc/.htaccess
+```
 
 Then point your browser to your newly installed application. You can open the
 JavaScript console and watch the xhr traffic, and experiment with commands like
 these:
 
+```javascript
     // Run a remote command in synchronous mode
 
     with (Wigwam.sync) {
@@ -56,3 +59,4 @@ these:
           alert("unexpected exception type: " + err);
       }
     }
+```
