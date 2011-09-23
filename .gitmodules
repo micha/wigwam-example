@@ -1,0 +1,3 @@
+[submodule "rpc"]
+	path = rpc
+	url = git://github.com/micha/wigwam.git
