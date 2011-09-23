@@ -60,3 +60,6 @@ these:
       }
     }
 ```
+
+The server-side code that is being executed is the public static methods of the
+API class as configured in _index.php_.
