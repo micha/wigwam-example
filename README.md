@@ -8,7 +8,7 @@ Quick Start
 
 In a shell do the following commands:
   
-```javascript
+```bash
     # Cd to your public html directory or docroot
     cd ~/public_html
 
