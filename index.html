@@ -2,8 +2,25 @@
   <head>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="rpc/wigwam.js"></script>
+    <script type="text/javascript">
+      with (Wigwam.sync) {
+        $(function() {
+          var App = Wigwam.Test.App;
+
+          $("code").click(function() {
+            $(this).text(App.getDoit().did);
+          });
+        })
+      }
+    </script>
+    <style type="text/css">
+      body { font-family: sans-serif; }
+      code { border: 1px solid darkgray; padding: 5px; margin: 2px;
+             cursor: pointer; }
+    </style>
   </head>
   <body>
     <h1>Hello</h1>
+    <p>What I did: <code>nothing yet (click me)</code></p>
   </body>
 </html>
