@@ -3,8 +3,8 @@ Wigwam
 
 Wigwam is a simple PHP web framework. This is an example application using it.
 
-Quick Start
-===========
+Installation
+============
 
 In a shell do the following commands:
   
@@ -23,7 +23,10 @@ In a shell do the following commands:
     vi rpc/.htaccess
 ```
 
-Then point your browser to your newly installed application. You can open the
+Quick Start
+===========
+
+Point your browser to your newly installed application. You can open the
 JavaScript console and watch the xhr traffic, and experiment with commands like
 these:
 
