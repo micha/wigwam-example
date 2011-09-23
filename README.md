@@ -192,3 +192,36 @@ implementation:
       }
     }
 ```
+
+The _index.html_ file contains the presentation layer of the application. It
+uses JavaScript to perform any UI (user interface) logic. Data is fetched from
+and returned to the server via the wigwam RPC (remote procedure call) framework.
+
+```html
+<html>
+  <head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- Wigwam.js depends on jQuery -->
+    <script type="text/javascript" src="rpc/wigwam.js"></script>
+    <script type="text/javascript">
+      with (Wigwam.sync) {
+        $(function() {
+          $("code").click(function() {
+            // Do a synchronous RPC call to \Wigwam\Test\App::getDoit()
+            $(this).text(Wigwam.Test.App.getDoit().did);
+          });
+        })
+      }
+    </script>
+    <style type="text/css">
+      body { font-family: sans-serif; }
+      code { border: 1px solid darkgray; padding: 5px; margin: 2px;
+             cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <p>What I did: <code>nothing yet (click me)</code></p>
+  </body>
+</html>
+```
