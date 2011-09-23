@@ -153,6 +153,7 @@ implementation:
        *   with (Wigwam.sync) {  // synchronous
        *     Wigwam.Test.App.getDoit();
        *   }
+       *   => { "did" : "it" }
        *   
        *   Wigwam.async(  // asynchronous
        *     Wigwam.Test.App.getDoit(),
