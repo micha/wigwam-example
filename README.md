@@ -174,7 +174,11 @@ implementation:
       }
 
       /**
-       * This method will throw an exception that can be caught in JS.
+       * This method will throw an exception that can be caught in JS. Any
+       * exception which is a subclass of Wigwam\Exception can be caught in
+       * the client. If an exception of any other type is thrown and not
+       * handled by the API class, it is converted to a generic exception of
+       * type Wigwam\Exception and passed on to the client.
        *
        * @param foo number The foo.
        * @param bar number The bar.
