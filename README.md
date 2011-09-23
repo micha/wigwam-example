@@ -32,13 +32,11 @@ these:
 
 ```javascript
     // Run a remote command in synchronous mode
-
     with (Wigwam.sync) {
       console.log(Wigwam.Test.App.getDoit());
     }
 
     // Run a remote command in asynchronous mode
-
     Wigwam.async(
       Wigwam.Test.App.getDoit(),
       function(data) { console.log(data) },
@@ -46,7 +44,6 @@ these:
     );
 
     // Exception handling
-
     with (Wigwam.sync) {
       var App = Wigwam.Test.App;
 
