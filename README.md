@@ -64,6 +64,20 @@ these:
     }
 ```
 
+What's Going On
+===============
+
+There are four components in the application:
+
+1. The _rpc/index.php_ file, which loads and configures the framework.
+2. The *Wigwam\HTTP* class, which takes care of the HTTP layer, doing all of
+   the content negotiation, session management, etc.
+3. The API classes that are inserted into the *Wigwam\HTTP* instance. Their
+   public static methods are automatically exported to the JavaScript 
+   environment.
+4. The _index.html_ file, which loads the wigwam JavaScript runtime and makes
+   RPC calls.
+   
 The server-side code that is being executed is the public static methods of the
 API class as configured in _rpc/index.php_:
 
@@ -129,9 +143,26 @@ implementation:
        * perty 'did' set to the value 'bar', in the format specified by the request
        * accepts header (i.e., Accepts: application/json -> { "did" : "it" }).
        *
-       * Using the wigwam base roles class, so any role (including deny) will pass.
-       * Normally you'd subclass it to have a functioning roles-based authorization
-       * and authentication system.
+       * In PHP:
+       *
+       *   \Wigwam\Test\App::getDoit();
+       *   => array('did' => 'it')
+       *
+       * In JavaScript:
+       *
+       *   with (Wigwam.sync) {  // synchronous
+       *     Wigwam.Test.App.getDoit();
+       *   }
+       *   
+       *   Wigwam.async(  // asynchronous
+       *     Wigwam.Test.App.getDoit(),
+       *     function(data) { console.log(data) },
+       *     function(err) { alert(err) }
+       *   );
+       *
+       * Here we use the wigwam base roles class, so any role (including deny) 
+       * will pass. Normally you'd subclass it to have a functioning roles-based 
+       * authorization and authentication system.
        *
        * @role deny
        *
