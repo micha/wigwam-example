@@ -1,7 +1,7 @@
 Wigwam
 ======
 
-Wigwam is a simple PHP web framework. This is an example application using it.
+[Wigwam](https://github.com/micha/wigwam) is a simple PHP web framework. This is an example application using it.
 
 Installation
 ============
